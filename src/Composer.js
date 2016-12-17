@@ -52,7 +52,7 @@ Composer.defaultProps = {
     android: 41,
   }), // TODO SHARE with GiftedChat.js and tests
   text: '',
-  placeholder: 'Type a message...',
+  placeholder: '写点什么吧...',
   placeholderTextColor: '#b2b2b2',
   textInputProps: null,
   multiline: true,
