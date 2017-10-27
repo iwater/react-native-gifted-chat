@@ -157,7 +157,7 @@ export default class MessageContainer extends React.Component {
 
           renderRow={this.renderRow}
           renderHeader={this.renderFooter}
-          renderFooter={this.renderLoadEarlier}
+          renderFooter={this.props.enableLoadEarlier && this.renderLoadEarlier}
           renderScrollComponent={this.renderScrollComponent}
         />
       </View>
@@ -178,6 +178,7 @@ MessageContainer.defaultProps = {
   renderMessage: null,
   onLoadEarlier: () => {
   },
+  enableLoadEarlier: true,
 };
 
 MessageContainer.propTypes = {
@@ -187,4 +188,5 @@ MessageContainer.propTypes = {
   renderMessage: PropTypes.func,
   onLoadEarlier: PropTypes.func,
   listViewProps: PropTypes.object,
+  enableLoadEarlier: PropTypes.bool,
 };
